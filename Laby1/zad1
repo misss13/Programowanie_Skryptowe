@@ -1,0 +1,29 @@
+5. Typowanie Pythona: silne i dynamiczne
+7. 	suma =  14
+	__name__ =  main
+	suma =  14
+	__name__ =  __main__
+	bo najpierw wykonał się import main a później ten sam program
+	
+	print('Ten tekst o najlepszym blogu CodeCouple.pl wyświetli się zawsze')
+
+	if __name__ == '__main__':
+    	print('Uruchamiamy bezpośrednio')
+	else:
+    	print('Uruchamiamy z importu')
+
+8.
+	Python 3.9.6 (default, Sep 17 2021, 16:49:59)
+	[GCC 10.3.0] on linux
+	Type "help", "copyright", "credits" or "license" for more information.
+
+	>>> print(__name__)
+	__main__
+	>>> import main
+	suma =  14
+	__name__ =  main
+	>>> print(__name__)
+	__main__
+
+	nie pojawia się
+
