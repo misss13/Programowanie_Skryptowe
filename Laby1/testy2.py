@@ -28,7 +28,7 @@ class Test_TestSum(unittest.TestCase):
         self.assertEqual(main2.sum(Fraction(1, 3), Fraction(4, 3)), Fraction(5,3))
 
     def test_sum_complex_correct(self):
-        self.assertEqual(main2.sum( complex(1, 2), complex(2, 10) ), complex(3, 12) )    
+        self.assertEqual(main2.sum( complex(2, 20), complex(2, 10) ), complex(4, 30) )
 
     def test_list_exeption(self):
         with self.assertRaises(Exception):

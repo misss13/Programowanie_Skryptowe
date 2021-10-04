@@ -11,9 +11,7 @@ def sum(arg1, arg2):
     #float otaz str
     assert float(arg1), "Błąd, to nie liczba"
     assert float(arg2), "Błąd, to nie liczba"
-    a1=float(arg1)
-    a2=float(arg2)
-    return a1+a2
+    return float(arg1)+float(arg2)
 
 
 if __name__ == '__main__':
