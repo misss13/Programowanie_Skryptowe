@@ -15,7 +15,7 @@ class Test_TestSum(unittest.TestCase):
         self.assertEqual(main.sum(2, '2'), 4)
 
     def test_sum_string_string(self):
-        self.assertEqual(main.sum('2.1', '2,0'), 4.1)
+        self.assertEqual(main.sum('2.1', '2.0'), 4.1)
     
     def test_sum_integer_wrong_number_in_string(self):
         self.assertEqual(main.sum(2, 'Ala ma kota123'), 2)
@@ -28,7 +28,7 @@ class Test_TestSum(unittest.TestCase):
         self.assertEqual(main.sum(Fraction(1, 3), "2.0"), 2.3333333333333335)
 
     def test_sum_complex_correct(self):
-        self.assertEqual( main.sum( complex(1, 2), complex(2, 10) ), complex(3, 12) )    
+        self.assertEqual( main.sum( complex(10, 4), complex(2, 11) ), complex(12, 15) )    
 
 if __name__ == '__main__':
     unittest.main()

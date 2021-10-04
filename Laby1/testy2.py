@@ -15,7 +15,7 @@ class Test_TestSum(unittest.TestCase):
         self.assertEqual(main2.sum(2, '2'), 4)
 
     def test_sum_string_string(self):
-        self.assertEqual(main2.sum('2.1', '2.0'), 4.1)
+        self.assertEqual(main2.sum('2.1', '2.pyt0'), 4.1)
     
     def test_sum_integer_wrong_number_in_string(self):
         with self.assertRaises(Exception):

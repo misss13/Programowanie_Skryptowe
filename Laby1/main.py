@@ -3,8 +3,6 @@ import cmath
 from fractions import Fraction
 
 
-
-
 def contains_letter(stri):
     for i in stri:
         if i.isalpha():
@@ -15,14 +13,6 @@ def contains_letter(stri):
 
 
 def sum(arg1, arg2):
-    if type(arg1) == type(1) and type(arg2) == type(1):
-        return arg1+arg2
-    if type(arg1) == type(1.0) and type(arg2) == type(1.0):
-        return arg1+arg2
-    if type(arg1) == type(1) and type(arg2) == type(1.0):
-        return arg1+arg2
-    if type(arg1) == type(1.0) and type(arg2) == type(1):
-        return arg1+arg2
     if type(arg1) == type(Fraction(1,2)) and type(arg2) == type(Fraction(1,2)):
         return float(arg1+arg2)
     if type(arg1) is complex or type(arg2) is complex:
