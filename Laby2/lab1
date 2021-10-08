@@ -1,0 +1,21 @@
+1. wysyłanie zapytan
+2. -I pobiera nagłówki ze stron
+3. domyślnie GET nie trzeba ale można -X GET
+4. wysłałam chyba używają amazona?  curl -X POST https://httpbin.org/anything
+5. curl -X GET --data "value=panda" GET https://httpbin.org/anything jeszcze jest opcaj --form do uploadu
+6. curl -O  www.google.com/robots.txt pobiera plik
+7. curl -X GET -H "User-Agent: delfin" https://httpbin.org/anything -H ustawia nagłówki
+8. curl -X DELETE -I https://httpbin.org/anything  przy pomocy flagi -I otrzymujemy kod 200 - powodzenia DELETE do usuwania plikow ale dla specialnych użytkowników zazwyczaj na mojej stronie zwraca 405 - not allowed
+9. curl -X POST  -H 'Content-Type: application/json' -d '{"value": "wieloryb"}' https://httpbin.org/anything
+10. curl -X POST  -H 'Content-Type: application/json' -d '{"value": "wieloryb"}' https://httpbin.org/anything json: ni jest równy null ma wartość
+11. curl -X POST -I -H "Accept-Encoding: gzip" https://httpbin.org/anything zmienił się sposób enkodowania, czyli kompresji w tym wypadku 
+12. curl -X POST  -H 'Content-Type: application/json' -d @zad12.json  https://httpbin.org/anything
+13. curl -X GET -O -H "Accept: image/png" https://httpbin.org/image && firefox image
+14. PUT do dodawania plików na stronie curl -X PUT -I https://httpbin.org/anything
+15. curl -X GET -O https://httpbin.org/image/jpeg && feh jpeg
+16. curl https://www.twitter.com pusto curl -X GET -I https://www.twitter.com 301 bo kod 301 Moved Permanently curl https://twitter.com/ to dziala :3
+17. curl -X GET -H "delfin: wieloryb" -I https://httpbin.org/anything nie obsługuje zwraca 200
+18. zwraca HTTP/2 404 /404 HTTP/2 200 zwraca 200
+19. curl -u 'username:password' https://httpbin.org/anything "Authorization": "Basic dXNlcm5hbWU6cGFzc3dvcmQ=", w base64 jest zaszyfrowane
+*20. curl -X GET -H 'Accept-Language: es-ES' https://twitter.com/ -o twittre.txt  (to jest wazne -o name) 
+21. curl https://api.stripe.com/v1/charges -u sk_test_4eC39HqLyjWDarjtT1zdp7dc: (na stronce) curl https://httpbin.org/anything -u sk_test_4eC39HqLyjWDarjtT1zdp7dc: działa   "Authorization": "Basic c2tfdGVzdF80ZUMzOUhxTHlqV0Rhcmp0VDF6ZHA3ZGM6", 
