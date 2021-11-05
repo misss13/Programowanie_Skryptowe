@@ -4,7 +4,6 @@ from term import Term
 from day import nthDayFrom
 
 class Test_TestDeanerySystem(unittest.TestCase):
-
     def test_term_earlierThan(self):
         self.assertTrue(Term(Day.TUE, 9, 45).earlierThan(Term(Day.WED, 10, 15)))
         self.assertTrue(Term(Day.TUE, 9, 45).earlierThan(Term(Day.TUE, 10, 15)))

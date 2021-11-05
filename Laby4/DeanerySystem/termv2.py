@@ -2,10 +2,10 @@ from day import Day
 
 class Term:
     def __init__(self, hour, minute, day, duration=90):
-        self.day = day
-        self.hour=hour
-        self.minute=minute
-        self.duration=90
+        self.day = Day(day)
+        self.hour = int(hour)
+        self.minute = int(minute)
+        self.duration = int(duration)
 
     def __str__(self):
         return "%s %d:%02d [%d]" %(self.day, self.hour, self.minute, self.duration)
