@@ -190,8 +190,3 @@ class t_tablele1(object):
                 fin += f'{table_final[j][i]: ^12}*'
             fin += pad
         return fin
-
-#print(t_tablele1().parse("d+ d- t+ t- d+ Kot"))
-#l=t_tablele1()
-#l.put(Lesson(Term(18, 0, Day.FRI), "Programowanie skryptowe", "Stanisław Polak", 2))
-#print(l)
