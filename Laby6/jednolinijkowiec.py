@@ -11,17 +11,17 @@ Counter(map(lambda dlugosc: len(dlugosc), sys.stdin.read().split()))
 #counter tworzy (slownik)
 dict(Counter(map(lambda dlugosc: len(dlugosc), sys.stdin.read().split())))
 
-# gotowa funkcja:
+##########################
 import sys
-from collections 
-import Counter
+import collections
 
-a=dict(Counter(map(lambda x: len(x), sys.stdin.read().split())))
+a=dict(collections.Counter(map(lambda dlugosc: len(dlugosc), sys.stdin.read().split())))
 print("{",end="")
 for k in sorted(a):
     print("%s: %s, " % (k, a[k]),end="") 
 print("}")
+##########################
 
-python -c 'import sys; from collections import Counter; a=dict(Counter(map(lambda x: len(x), sys.stdin.read().split()))); print("{",end=""); [print("%s: %s, " % (k, a[k]),end="") for k in sorted(a)]; print("}")
+python -c 'import sys; from collections import Counter; a=dict(Counter(map(lambda dlugosc: len(dlugosc), sys.stdin.read().split()))); print("{",end=""); [print("%s: %s, " % (k, a[k]),end="") for k in sorted(a)]; print("}")
 '''
-import sys; from collections import Counter; a=dict(Counter(map(lambda x: len(x), sys.stdin.read().split()))); print("{", end=""); [print("%s: %s, " % (k, a[k]),end="") for k in sorted(a)]; print("}")
+import sys; from collections import Counter; a=dict(Counter(map(lambda dlugosc: len(dlugosc), sys.stdin.read().split()))); print("{", end=""); [print("%s: %s, " % (k, a[k]),end="") for k in sorted(a)]; print("}")
