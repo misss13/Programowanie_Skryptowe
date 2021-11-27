@@ -1,6 +1,33 @@
 from .basicterm import Term
 from .day import Day
 
+class LessonType():
+    def __init__(self, name, year, teacherName, fullTime):
+        self.name = name
+        self.year = year
+        self.teacherName = teacherName
+        self.fullTime = fullTime
+    
+    def __eq__(self, second):
+        return(self.name == second.name and self.year ==second.year and self.teacherName == second.teacherName and  self.fullTime ==  second.fullTime)
+
+class LessonFactory():
+    lesssson_istniejace = []
+
+    @staticmethod
+    def addLesson( name, year, teacherName, fullTime):
+        nowy_typ = LessonType(name, year, teacherName, fullTime)
+        if nowy_typ in LessonFactory.lesssson_istniejace:
+            LessonFactory.lesssson_istniejace.index(nowy_typ)
+        else:
+            LessonFactory.lesssson_istniejace.append(nowy_typ)
+            return len(LessonFactory.lesssson_istniejace) -1
+    
+    @staticmethod
+    def getLesson(indexy):
+        typ = LessonFactory.lesssson_istniejace[indexy]
+        return typ.name, typ.year, typ.teacherName, typ.fullTime
+    
 class Lesson():
     def __init__(self, timetable, term: Term, name, teacherName, year):
         self.__timetable = timetable
