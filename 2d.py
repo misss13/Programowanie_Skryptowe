@@ -7,7 +7,7 @@ zmiana dzialania funkcjiF bo mamy do obslugi 8 bitow^(tak jak napisano wyzej)
 pomijam kompresje, tylko permutacje
 nie uzywam permutacji poczatkowej IP i koncowej FP (w DESie nie byly potrzebne w sensie były żeby to nazwać desem ale nie uzywamy juz 8-bitowych magistrali)
 gdyby cos nie dzialalo https://github.com/misss13/Programowanie_Skryptowe/blob/main/2d.py
-widze ze wciencia wg się nie przekopiowały  
+widze ze wciencia wg się nie przekopiowały
 '''
 import textwrap
 
