@@ -4,8 +4,10 @@ DES-bardzo zmodyfikowany z 128bitowy blokiem wiadomosci, 64bitowym kluczem zmien
 tutaj link do wizualizacji tego co zmieniłam https://i.imgur.com/xngkGiY.png
 nowe s-boxy jest ich 8 po 4 wiersze i 32 kolumny - używam 7 bitów klucza ->2 na wiersz, 5 na kolumny, jeden pomijam(gdybym uzyla 6 SBOX wygladalby mniej czytelnie )
 zmiana dzialania funkcjiF bo mamy do obslugi 8 bitow^(tak jak napisano wyzej)
-pomijam kompresje, tylko permutacje 
+pomijam kompresje, tylko permutacje
 nie uzywam permutacji poczatkowej IP i koncowej FP (w DESie nie byly potrzebne w sensie były żeby to nazwać desem ale nie uzywamy juz 8-bitowych magistrali)
+gdyby cos nie dzialalo https://github.com/misss13/Programowanie_Skryptowe/blob/main/2d.py
+widze ze wciencia wg się nie przekopiowały
 '''
 import textwrap
 
