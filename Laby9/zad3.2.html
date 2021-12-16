@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <form>
+        <input type="text">
+    </form>
+    <kastomowy-span>0</kastomowy-span>
+    <kastomowy-span>0</kastomowy-span>
+    <kastomowy-span>0</kastomowy-span>
+    <kastomowy-span>0</kastomowy-span>
+    <kastomowy-span>0</kastomowy-span>
+    <kastomowy-span>0</kastomowy-span>
+    <kastomowy-span>0</kastomowy-span>
+    <kastomowy-span>0</kastomowy-span>
+    <kastomowy-span>0</kastomowy-span>
+    <kastomowy-span>0</kastomowy-span>
+    
+    <script>
+
+        class kastomowy extends HTMLElement {
+            constructor() {
+                super();
+                this.shadow = this.attachShadow({
+                    mode: 'open' //mozemy sie dostac do DOM
+                })
+                this.value = 10;
+            }
+
+            set value(val) {
+                this.setAttribute('value', val)
+            }
+
+            get value() {
+                return this.getAttribute('value')
+            }
+
+            static get observedAttributes() {
+                return ['value'];
+            }
+
+            connectedCallback() {
+                this.shadow.innerHTML = `${this.value}`;
+            }
+
+            attributeChangedCallback(prop, oldVal, newVal) {
+                if (prop === 'value') this.shadow.innerHTML = `${this.value}`;
+            }
+        }
+
+        customElements.define('kastomowy-span', kastomowy)
+
+        var loop_val = 10
+        document.getElementsByTagName('input')[0].value = loop_val;
+        function zmiennik() {
+            loop_val = document.getElementsByTagName('input')[0].value;
+            if(loop_val > 0) {
+                loop_val -= 1;
+                document.getElementsByTagName('input')[0].value = loop_val;
+                for (let i = 0; i < 10; i++) {
+                    document.getElementsByTagName('kastomowy-span')[i].setAttribute('value', loop_val);
+                }
+            }
+        }
+
+        setInterval(zmiennik, 1000);
+    </script>
+</body>
+</html>

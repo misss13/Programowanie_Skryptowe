@@ -1,0 +1,16 @@
+/*setInterval(() => {
+    loop_val = document.getElementsByTagName('input')[0].getAttribute('value')
+    //loop_val = document.getElementsByTagName('input')[0].value
+    console.log(document.getElementsByTagName('input')[0].value)
+    if (loop_val > 0) {
+        loop_val -= 1
+        
+        // https://stackoverflow.com/questions/58599251/using-the-setattribute-method-with-int-value
+        //zmiana atrybutu value a nie vartości value
+        document.getElementsByTagName('input')[0].setAttribute('value', loop_val)
+        //document.getElementsByTagName('input')[0].value = loop_val
+        for (let i = 0; i < 10; i++) {
+            document.getElementsByTagName('span')[i].childNodes[0].nodeValue = loop_val
+        }
+    }
+}, 1000);*/

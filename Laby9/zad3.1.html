@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="text">
+    </form>
+
+    <span>0</span>
+    <span>0</span>
+    <span>0</span>
+    <span>0</span>
+    <span>0</span>
+    <span>0</span>
+    <span>0</span>
+    <span>0</span>
+    <span>0</span>
+    <span>0</span>
+
+    <script>
+        var loop_val = ""
+        var cyferka = 10
+        document.getElementsByTagName('input')[0].setAttribute('value', 10)
+
+        function zmiennik() {
+            loop_val = document.getElementsByTagName('input')[0].getAttribute('value')
+            cyferka = parseInt(loop_val)
+                  
+            if (cyferka > 0) {
+                cyferka -= 1
+                loop_val = String(cyferka)               
+                document.getElementsByTagName('input')[0].setAttribute('value', loop_val)
+    
+                for (let i = 0; i < 10; i++) {
+                    document.getElementsByTagName('span')[i].childNodes[0].nodeValue = cyferka
+                }
+            }
+        }
+        setInterval(zmiennik, 1000);
+    </script>
+</body>
+
+</html>
